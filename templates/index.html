@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Emotion Detector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .video-container {
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      background: black;
+    }
+
+    video, img {
+      display: block;
+      width: 640px;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+    }
+
+    @media screen and (max-width: 700px) {
+      video, img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Real-Time Emotion Detection</h1>
+  <p class="subtitle">Using Deep Learning and OpenCV to recognize facial emotions in real time from your webcam feed.</p>
+
+  <div class="video-container">
+    <img src="{{ url_for('video_feed') }}" alt="Webcam feed">
+  </div>
+
+  <footer>
+    Developed by Gaurav Gupta, Siddhant Dwevedi, Manny Bharti | Final Year B.Tech Project – 2025
+  </footer>
+
+</body>
+</html>
